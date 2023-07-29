@@ -19,7 +19,7 @@ Route::get('/ping', function(){
     return ['pong' => true];
 });
 
-Route::get('/Erro401', [AuthController::class, 'Não     Altorizado'])->name('Login');
+Route::get('/Erro401', [AuthController::class, 'NãoAltorizado'])->name('Login');
 
 Route::post('/auth/login',[AuthController::class,'login']);
 Route::post('/auth/register',[AuthController::class,'register']);
@@ -74,14 +74,4 @@ Route::middleware('auth:api')->group(function(){
 
     Route::get('/myreservantion',[ReservationsController::class,'getMyReservantion']);
     Route::delete('/myreservantion/{id}',[ReservationsController::class,'delMyReservation']);
-
-
-
-
-
-
-
-
-
-
 });

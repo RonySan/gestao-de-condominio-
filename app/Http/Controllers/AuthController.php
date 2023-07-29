@@ -19,7 +19,7 @@ class AuthController extends Controller
     public function register(Rquest $request){
         $arry = ['erro'=>''];
 
-        $validador = Validator::make($_REQUEST->all(),[
+        $validador = valideter::make($_REQUEST->all(),[
             'name' => 'required',
             'email' => 'required|email|unique:users,email',
             'cpf' => 'required|digits:11|unique:users,cpf',
